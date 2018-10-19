@@ -40,3 +40,5 @@ if HolidayJp(datetime.date.today()).is_holiday:
   print('False')
 else:
   print('True')
+
+check the unit test holiday_jp/test.py
