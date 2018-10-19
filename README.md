@@ -8,7 +8,7 @@ pip3 install zenhan
 using dataset from https://github.com/holiday-jp/holiday_jp
 
 # test
-python3 -m unittest holiday_jp/test.py
+python3 -m unittest holiday_jp.test
 
 # for dev
 Build on linux with python 3.6
