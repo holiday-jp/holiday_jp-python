@@ -13,6 +13,12 @@ class HolidayJp(object):
   name = '' # the name of the holiday in jp ex: 元日
   name_en = '' # the name of the holiday in en ex: New Year's Day
   is_holiday = False # if the day is a holiday day
+  is_business_day = False # if the day is from [monday, friday]
+
+  # defaul business day can be overwritten depends on context
+  BUSINESS_DAY = ['月', '火', '水', '木', '金']
+
+  HOLIDAY_DATASET = HolidayDataset.HOLIDAYS
 
   def __init__(self, date):
     """init the date and fill the property."""
@@ -28,10 +34,16 @@ class HolidayJp(object):
       self.date_obj = date
 
     date_str = self.date_obj.strftime('%Y-%m-%d')
-    if HolidayDataset.HOLIDAYS.get(date_str):
+    if self.HOLIDAY_DATASET.get(date_str):
       # as the date is in the dict
       self.is_holiday = True
-      self.week = HolidayDataset.HOLIDAYS[date_str]['week']
-      self.week_en = HolidayDataset.HOLIDAYS[date_str]['week_en']
-      self.name = HolidayDataset.HOLIDAYS[date_str]['name']
-      self.name_en = HolidayDataset.HOLIDAYS[date_str]['name_en']
+      self.week = self.HOLIDAY_DATASET[date_str]['week']
+      self.week_en = self.HOLIDAY_DATASET[date_str]['week_en']
+      self.name = self.HOLIDAY_DATASET[date_str]['name']
+      self.name_en = self.HOLIDAY_DATASET[date_str]['name_en']
+      if self.week in self.BUSINESS_DAY:
+        self.is_business_day = True
+    else:
+      # Monday is 0 and Sunday is 6.
+      if self.date_obj.weekday() < 5:
+        self.is_business_day = True
