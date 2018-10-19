@@ -5,6 +5,7 @@ Japanese holiday for Python
 # dependencies
 pip3 install zenhan
 
+using dataset from https://github.com/holiday-jp/holiday_jp
 
 # test
 python3 -m unittest holiday_jp/test.py

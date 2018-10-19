@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(name='holiday_jp',
-      version='18.10.18',
+      version='18.10.19',
       url='https://github.com/LUXEYS/holiday_jp-python',
       license='MIT',
       author='Luxeys',

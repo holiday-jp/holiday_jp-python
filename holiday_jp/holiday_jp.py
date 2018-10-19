@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 import datetime
 import zenhan
+from .holidays import HolidayDataset
 
 
 class HolidayJp(object):
@@ -12,8 +13,6 @@ class HolidayJp(object):
   name = '' # the name of the holiday in jp ex: 元日
   name_en = '' # the name of the holiday in en ex: New Year's Day
   is_holiday = False # if the day is a holiday day
-
-  HOLIDAYS = ''
 
   def __init__(self, date):
     """init the date and fill the property."""
@@ -28,35 +27,11 @@ class HolidayJp(object):
     else:
       self.date_obj = date
 
-    if not self.HOLIDAYS:
-      self.HOLIDAYS = self.build_dict()
-
     date_str = self.date_obj.strftime('%Y-%m-%d')
-    if self.HOLIDAYS.get(date_str):
+    if HolidayDataset.HOLIDAYS.get(date_str):
       # as the date is in the dict
       self.is_holiday = True
-      self.week = self.HOLIDAYS[date_str]['week']
-      self.week_en = self.HOLIDAYS[date_str]['week_en']
-      self.name = self.HOLIDAYS[date_str]['name']
-      self.name_en = self.HOLIDAYS[date_str]['name_en']
-
-  @staticmethod
-  def build_dict():
-    """Init the dict."""
-    holiday_dict = {}
-    with open('holiday_jp/holidays_detailed.yml') as file:
-      lines = file.readlines()
-      for i in range(0, len(lines)):
-        line = lines[i]
-        if 'date' in line:
-          date_str = line.replace('date: ', '').strip()
-          holiday_dict[date_str] = {}
-        elif 'week:' in line:
-          holiday_dict[date_str]['week'] = line.replace('week: ', '').strip()
-        elif 'week_en:' in line:
-          holiday_dict[date_str]['week_en'] = line.replace('week_en: ', '').strip()
-        elif 'name:' in line:
-          holiday_dict[date_str]['name'] = line.replace('name: ', '').strip()
-        elif 'name_en:' in line:
-          holiday_dict[date_str]['name_en'] = line.replace('name_en: ', '').strip()
-    return holiday_dict
+      self.week = HolidayDataset.HOLIDAYS[date_str]['week']
+      self.week_en = HolidayDataset.HOLIDAYS[date_str]['week_en']
+      self.name = HolidayDataset.HOLIDAYS[date_str]['name']
+      self.name_en = HolidayDataset.HOLIDAYS[date_str]['name_en']
