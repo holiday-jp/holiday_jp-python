@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/LUXEYS/holiday_jp-python.svg?branch=master)](https://travis-ci.org/LUXEYS/holiday_jp-python)
+
 # holiday_jp-python
 
 Japanese holiday for Python
