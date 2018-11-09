@@ -5,7 +5,7 @@
 Japanese holiday for Python
 
 # dependencies
-> pip3 install zenhan
+> pip3 install -r requirements.txt
 
 using dataset from https://github.com/holiday-jp/holiday_jp
 
