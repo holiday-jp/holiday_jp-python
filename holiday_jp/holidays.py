@@ -1724,7 +1724,7 @@ class HolidayDataset(object):
     },
     "1990-11-12": {
         "name": "即位礼正殿の儀",
-        "name_en": "The Ceremony of the Enthronement of His Majesty th Emperor (at the Seiden)",
+        "name_en": "The Ceremony of the Enthronement of His Majesty the Emperor (at the Seiden)",
         "week": "月",
         "week_en": "Monday"
     },
@@ -4565,6 +4565,24 @@ class HolidayDataset(object):
         "name_en": "Showa Day",
         "week": "月",
         "week_en": "Monday"
+    },
+    "2019-04-30": {
+        "name": "祝日",
+        "name_en": "Public Holiday",
+        "week": "火",
+        "week_en": "Tuesday"
+    },
+    "2019-05-01": {
+        "name": "祝日",
+        "name_en": "Public Holiday",
+        "week": "水",
+        "week_en": "Wednesday"
+    },
+    "2019-05-02": {
+        "name": "祝日",
+        "name_en": "Public Holiday",
+        "week": "木",
+        "week_en": "Thursday"
     },
     "2019-05-03": {
         "name": "憲法記念日",
