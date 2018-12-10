@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/LUXEYS/holiday_jp-python.svg?branch=master)](https://travis-ci.org/LUXEYS/holiday_jp-python)
+ [![GitHub release](https://img.shields.io/github/release/LUXEYS/holiday_jp-python.svg)](https://github.com/LUXEYS/holiday_jp-python/releases)
 
 # holiday_jp-python
 
