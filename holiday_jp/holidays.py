@@ -4644,6 +4644,12 @@ class HolidayDataset(object):
         "week": "月",
         "week_en": "Monday"
     },
+    "2019-10-22": {
+        "name": "休日（祝日扱い）",
+        "name_en": "Holiday",
+        "week": "火",
+        "week_en": "Tuesday"
+    },
     "2019-11-03": {
         "name": "文化の日",
         "name_en": "National Culture Day",

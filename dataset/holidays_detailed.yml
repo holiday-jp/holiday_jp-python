@@ -4637,6 +4637,12 @@
   week_en: Monday
   name: 体育の日
   name_en: Health and Sports Day
+2019-10-22:
+   date: 2019-10-22
+   week: 火
+   week_en: Tuesday
+   name: 休日（祝日扱い）
+   name_en: Holiday
 2019-11-03:
   date: 2019-11-03
   week: 日
