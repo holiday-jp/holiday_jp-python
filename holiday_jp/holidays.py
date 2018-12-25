@@ -4567,20 +4567,20 @@ class HolidayDataset(object):
         "week_en": "Monday"
     },
     "2019-04-30": {
-        "name": "祝日",
-        "name_en": "Coronation Day holiday",
+        "name": "休日",
+        "name_en": "Holiday",
         "week": "火",
         "week_en": "Tuesday"
     },
     "2019-05-01": {
-        "name": "即位の礼",
-        "name_en": "Coronation Day",
+        "name": "休日（祝日扱い）",
+        "name_en": "Holiday",
         "week": "水",
         "week_en": "Wednesday"
     },
     "2019-05-02": {
-        "name": "祝日",
-        "name_en": "Coronation Day holiday",
+        "name": "休日",
+        "name_en": "Holiday",
         "week": "木",
         "week_en": "Thursday"
     },
