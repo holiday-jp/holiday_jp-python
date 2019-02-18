@@ -4639,7 +4639,7 @@ class HolidayDataset(object):
         "week_en": "Monday"
     },
     "2019-10-14": {
-        "name": "体育の日",
+        "name": "体育の日（スポーツの日）",
         "name_en": "Health and Sports Day",
         "week": "月",
         "week_en": "Monday"
