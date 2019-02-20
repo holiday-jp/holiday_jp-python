@@ -11,7 +11,7 @@ class HolidayJpTest(TestCase):
     """Check that the calss init correctly."""
     HolidayJp('1990-01-01') # support string
     HolidayJp(datetime.date(year=1990, month=1, day=1)) # date
-    with self.assertRaises(ValueError) as context:
+    with self.assertRaises(ValueError):
       HolidayJp('Banana') # but not banana
 
   def test_is_holiday(self):
@@ -67,3 +67,21 @@ class HolidayJpTest(TestCase):
 
     new_holiday_date = MyHolidayJp('2018-10-01')
     self.assertEqual(new_holiday_date.is_holiday, True)
+
+  def test_between(self):
+    """Check that I can retrieved holiday date between 2 dates."""
+    holidays = HolidayJp.between('2009-01-01', '2009-01-31')
+    new_year_day = holidays[0]
+    self.assertEqual(datetime.date(year=2009, month=1, day=1), new_year_day.date_obj)
+    self.assertEqual('元日', new_year_day.name)
+    self.assertEqual("New Year's Day", new_year_day.name_en)
+    self.assertEqual('木', new_year_day.week)
+
+    self.assertEqual(datetime.date(year=2009, month=1, day=12), holidays[1].date_obj)
+    self.assertEqual('成人の日', holidays[1].name)
+
+    holidays = HolidayJp.between(datetime.date(year=2008, month=12, day=23), datetime.date(year=2009, month=1, day=12))
+
+    self.assertEqual(datetime.date(year=2008, month=12, day=23), holidays[0].date_obj)
+    self.assertEqual(datetime.date(year=2009, month=1, day=1), holidays[1].date_obj)
+    self.assertEqual(datetime.date(year=2009, month=1, day=12), holidays[2].date_obj)

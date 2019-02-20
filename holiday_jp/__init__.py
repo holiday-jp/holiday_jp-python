@@ -1,1 +1,1 @@
-from .holiday_jp import HolidayJp
+from .holiday_jp import HolidayJp # noqa

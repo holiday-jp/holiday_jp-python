@@ -21,17 +21,12 @@ class HolidayJp(object):
   HOLIDAY_DATASET = HolidayDataset.HOLIDAYS
 
   def __init__(self, date):
-    """init the date and fill the property."""
-    # if date is string support the following format otherwise must be a date or datetime object
-    if isinstance(date, str):
-      # normalize
-      date = zenhan.z2h(date)
-      try:
-        self.date_obj = datetime.datetime.strptime(date, '%Y-%m-%d')
-      except Exception as e:
-        raise e
-    else:
-      self.date_obj = date
+    """init the date and fill the property.
+
+      date: string with the following format yyyy-mm-dd
+        or date object
+    """
+    self.date_obj = HolidayJp._format_date(date)
 
     date_str = self.date_obj.strftime('%Y-%m-%d')
     if self.HOLIDAY_DATASET.get(date_str):
@@ -47,3 +42,50 @@ class HolidayJp(object):
       # Monday is 0 and Sunday is 6.
       if self.date_obj.weekday() < 5:
         self.is_business_day = True
+
+  def _format_date(date):
+    """Format the date to date object."""
+    date_obj = None
+    # if date is string support the following format otherwise must be a date or datetime object
+    if isinstance(date, str):
+      # normalize
+      date = zenhan.z2h(date)
+      try:
+        date_obj = datetime.datetime.strptime(date, '%Y-%m-%d').date()
+      except Exception as e:
+        raise e
+    else:
+      date_obj = date
+
+    return date_obj
+
+  def between(start, last):
+    """Return a tuple of HolidayJp objects between 2 dates.
+
+      start, last: string with the following format yyyy-mm-dd
+        or date object
+    """
+    from dateutil import relativedelta
+
+    start = HolidayJp._format_date(start)
+    last = HolidayJp._format_date(last)
+
+    result = []
+
+    if last < start:
+      raise ValueError('last must be greater than start.')
+
+    # include the limit
+    start_date_str = start.strftime('%Y-%m-%d')
+    if HolidayJp.HOLIDAY_DATASET.get(start_date_str):
+      result.append(HolidayJp(start))
+    # go day by day
+    next_day = start + relativedelta.relativedelta(days=1)
+
+    while next_day <= last:
+      next_day_str = next_day.strftime('%Y-%m-%d')
+      if HolidayJp.HOLIDAY_DATASET.get(next_day_str):
+        result.append(HolidayJp(next_day))
+      next_day += relativedelta.relativedelta(days=1)
+
+    return result

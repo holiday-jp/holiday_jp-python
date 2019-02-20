@@ -44,6 +44,15 @@ if HolidayJp(datetime.date.today()).is_holiday:
   print('False')
 else:
   print('True')
+
+# Between return holidays between 2 dates in text
+holidays = HolidayJp.between('2009-01-01', '2009-01-31')
+new_year_day = holidays[0]
+self.assertEqual(datetime.date(year=2009, month=1, day=1), new_year_day.date_obj)
+self.assertEqual('元日', new_year_day.name)
+
+# Or date object
+holidays = HolidayJp.between(datetime.date(year=2008, month=12, day=23), datetime.date(year=2009, month=1, day=12))
 ```
 
-check the unit test holiday_jp/test.py
+For more usage check the unit test holiday_jp/test.py
