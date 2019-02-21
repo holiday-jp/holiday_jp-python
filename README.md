@@ -5,6 +5,11 @@
 
 Japanese holiday for Python
 
+# install
+
+> pip install holiday-jp
+
+
 # dependencies
 > pip3 install -r requirements.txt
 
