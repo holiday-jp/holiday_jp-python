@@ -5,20 +5,20 @@
 
 Japanese holiday for Python
 
-# install
+## install
 
 > pip install holiday-jp
 
 
-# dependencies
+### dependencies
 > pip3 install -r requirements.txt
 
 using dataset from https://github.com/holiday-jp/holiday_jp
 
-# test
+### test
 > python3 -m unittest holiday_jp.test
 
-# for dev
+### for dev
 Build on linux with python 3.6
 
 Build command:
@@ -29,12 +29,12 @@ OR
 Run ./build.sh
 build the package that will be available in the dist/ directory
 
-# alternative install
+### alternative install
 
 download the release and install this way:
 pip3 install holiday_jp-xxx.tar.gz
 
-# Usage
+## Usage
 
 ```
 from holiday_jp import HolidayJp
