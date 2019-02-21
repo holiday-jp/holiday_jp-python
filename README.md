@@ -29,7 +29,7 @@ OR
 Run ./build.sh
 build the package that will be available in the dist/ directory
 
-# install
+# alternative install
 
 download the release and install this way:
 pip3 install holiday_jp-xxx.tar.gz
