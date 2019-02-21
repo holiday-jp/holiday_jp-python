@@ -17,8 +17,7 @@ class HolidayDataset(object):
 holiday_dict = {}
 with open('dataset/holidays_detailed.yml') as file:
   lines = file.readlines()
-  for i in range(0, len(lines)):
-    line = lines[i]
+  for i, line in enumerate(lines):
     if 'date' in line:
       date_str = line.replace('date: ', '').strip()
       holiday_dict[date_str] = {}
