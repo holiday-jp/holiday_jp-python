@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 import datetime
-import zenhan
 from .holidays import HolidayDataset
 
 
@@ -45,11 +44,15 @@ class HolidayJp(object):
 
   def _format_date(date):
     """Format the date to date object."""
+    import unicodedata
     date_obj = None
     # if date is string support the following format otherwise must be a date or datetime object
     if isinstance(date, str):
       # normalize
-      date = zenhan.z2h(date)
+      date = unicodedata.normalize('NFKC', date)
+      # plus hyphen
+      date = date.replace('−', '-')
+
       try:
         date_obj = datetime.datetime.strptime(date, '%Y-%m-%d').date()
       except Exception as e:

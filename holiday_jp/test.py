@@ -70,7 +70,8 @@ class HolidayJpTest(TestCase):
 
   def test_between(self):
     """Check that I can retrieved holiday date between 2 dates."""
-    holidays = HolidayJp.between('2009-01-01', '2009-01-31')
+    # add a full width date to test the normalization
+    holidays = HolidayJp.between('２００９−０１−０１', '2009-01-31')
     new_year_day = holidays[0]
     self.assertEqual(datetime.date(year=2009, month=1, day=1), new_year_day.date_obj)
     self.assertEqual('元日', new_year_day.name)
