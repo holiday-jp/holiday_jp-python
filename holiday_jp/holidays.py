@@ -1489,7 +1489,7 @@ class HolidayDataset(object):
         "week_en": "Tuesday"
     },
     "1988-05-04": {
-        "name": "国民の休日",
+        "name": "休日",
         "name_en": "Citizen's Holiday",
         "week": "水",
         "week_en": "Wednesday"
@@ -1585,7 +1585,7 @@ class HolidayDataset(object):
         "week_en": "Wednesday"
     },
     "1989-05-04": {
-        "name": "国民の休日",
+        "name": "休日",
         "name_en": "Citizen's Holiday",
         "week": "木",
         "week_en": "Thursday"
@@ -1681,7 +1681,7 @@ class HolidayDataset(object):
         "week_en": "Thursday"
     },
     "1990-05-04": {
-        "name": "国民の休日",
+        "name": "休日",
         "name_en": "Citizen's Holiday",
         "week": "金",
         "week_en": "Friday"
@@ -1783,7 +1783,7 @@ class HolidayDataset(object):
         "week_en": "Friday"
     },
     "1991-05-04": {
-        "name": "国民の休日",
+        "name": "休日",
         "name_en": "Citizen's Holiday",
         "week": "土",
         "week_en": "Saturday"
@@ -1969,7 +1969,7 @@ class HolidayDataset(object):
         "week_en": "Monday"
     },
     "1993-05-04": {
-        "name": "国民の休日",
+        "name": "休日",
         "name_en": "Citizen's Holiday",
         "week": "火",
         "week_en": "Tuesday"
@@ -2065,7 +2065,7 @@ class HolidayDataset(object):
         "week_en": "Tuesday"
     },
     "1994-05-04": {
-        "name": "国民の休日",
+        "name": "休日",
         "name_en": "Citizen's Holiday",
         "week": "水",
         "week_en": "Wednesday"
@@ -2161,7 +2161,7 @@ class HolidayDataset(object):
         "week_en": "Wednesday"
     },
     "1995-05-04": {
-        "name": "国民の休日",
+        "name": "休日",
         "name_en": "Citizen's Holiday",
         "week": "木",
         "week_en": "Thursday"
@@ -2251,7 +2251,7 @@ class HolidayDataset(object):
         "week_en": "Friday"
     },
     "1996-05-04": {
-        "name": "国民の休日",
+        "name": "休日",
         "name_en": "Citizen's Holiday",
         "week": "土",
         "week_en": "Saturday"
@@ -2551,7 +2551,7 @@ class HolidayDataset(object):
         "week_en": "Monday"
     },
     "1999-05-04": {
-        "name": "国民の休日",
+        "name": "休日",
         "name_en": "Citizen's Holiday",
         "week": "火",
         "week_en": "Tuesday"
@@ -2647,7 +2647,7 @@ class HolidayDataset(object):
         "week_en": "Wednesday"
     },
     "2000-05-04": {
-        "name": "国民の休日",
+        "name": "休日",
         "name_en": "Citizen's Holiday",
         "week": "木",
         "week_en": "Thursday"
@@ -2749,7 +2749,7 @@ class HolidayDataset(object):
         "week_en": "Thursday"
     },
     "2001-05-04": {
-        "name": "国民の休日",
+        "name": "休日",
         "name_en": "Citizen's Holiday",
         "week": "金",
         "week_en": "Friday"
@@ -2851,7 +2851,7 @@ class HolidayDataset(object):
         "week_en": "Friday"
     },
     "2002-05-04": {
-        "name": "国民の休日",
+        "name": "休日",
         "name_en": "Citizen's Holiday",
         "week": "土",
         "week_en": "Saturday"
@@ -3049,7 +3049,7 @@ class HolidayDataset(object):
         "week_en": "Monday"
     },
     "2004-05-04": {
-        "name": "国民の休日",
+        "name": "休日",
         "name_en": "Citizen's Holiday",
         "week": "火",
         "week_en": "Tuesday"
@@ -3145,7 +3145,7 @@ class HolidayDataset(object):
         "week_en": "Tuesday"
     },
     "2005-05-04": {
-        "name": "国民の休日",
+        "name": "休日",
         "name_en": "Citizen's Holiday",
         "week": "水",
         "week_en": "Wednesday"
@@ -3241,7 +3241,7 @@ class HolidayDataset(object):
         "week_en": "Wednesday"
     },
     "2006-05-04": {
-        "name": "国民の休日",
+        "name": "休日",
         "name_en": "Citizen's Holiday",
         "week": "木",
         "week_en": "Thursday"
@@ -3577,7 +3577,7 @@ class HolidayDataset(object):
         "week_en": "Monday"
     },
     "2009-09-22": {
-        "name": "国民の休日",
+        "name": "休日",
         "name_en": "Citizen's Holiday",
         "week": "火",
         "week_en": "Tuesday"
@@ -4177,7 +4177,7 @@ class HolidayDataset(object):
         "week_en": "Monday"
     },
     "2015-09-22": {
-        "name": "国民の休日",
+        "name": "休日",
         "name_en": "Citizen's Holiday",
         "week": "火",
         "week_en": "Tuesday"
@@ -4729,7 +4729,7 @@ class HolidayDataset(object):
         "week_en": "Tuesday"
     },
     "2020-05-06": {
-        "name": "こどもの日 振替休日",
+        "name": "憲法記念日 振替休日",
         "name_en": "Holiday in lieu",
         "week": "水",
         "week_en": "Wednesday"
@@ -5389,7 +5389,7 @@ class HolidayDataset(object):
         "week_en": "Monday"
     },
     "2026-09-22": {
-        "name": "国民の休日",
+        "name": "休日",
         "name_en": "Citizen's Holiday",
         "week": "火",
         "week_en": "Tuesday"
@@ -6031,7 +6031,7 @@ class HolidayDataset(object):
         "week_en": "Monday"
     },
     "2032-09-21": {
-        "name": "国民の休日",
+        "name": "休日",
         "name_en": "Citizen's Holiday",
         "week": "火",
         "week_en": "Tuesday"
@@ -6565,7 +6565,7 @@ class HolidayDataset(object):
         "week_en": "Monday"
     },
     "2037-09-22": {
-        "name": "国民の休日",
+        "name": "休日",
         "name_en": "Citizen's Holiday",
         "week": "火",
         "week_en": "Tuesday"
@@ -7201,7 +7201,7 @@ class HolidayDataset(object):
         "week_en": "Monday"
     },
     "2043-09-22": {
-        "name": "国民の休日",
+        "name": "休日",
         "name_en": "Citizen's Holiday",
         "week": "火",
         "week_en": "Tuesday"
@@ -7843,7 +7843,7 @@ class HolidayDataset(object):
         "week_en": "Monday"
     },
     "2049-09-21": {
-        "name": "国民の休日",
+        "name": "休日",
         "name_en": "Citizen's Holiday",
         "week": "火",
         "week_en": "Tuesday"
