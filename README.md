@@ -41,13 +41,13 @@ pip3 install holiday_jp-xxx.tar.gz
 
 ```
 from holiday_jp import HolidayJp
+# with string date YYYY-MM-DD
 if HolidayJp('1990-01-01').is_holiday:
   print('True')
 
-work with date
 import datetime
 from holiday_jp import HolidayJp
-
+# or date object
 if HolidayJp(datetime.date.today()).is_holiday:
   print('False')
 else:
