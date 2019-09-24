@@ -18,6 +18,13 @@ Japanese holiday for Python
 
 using dataset from https://github.com/holiday-jp/holiday_jp
 
+#### Implemantations
+
+| Implemantation | Release version using holiday_jp v0.x | Release version using holiday_jp v1.x |
+| --- | --- | --- |
+| [Python 3](https://github.com/holiday-jp/holiday_jp-go) | - | master |
+
+
 ### test
 > python3 -m unittest holiday_jp.test
 
