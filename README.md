@@ -22,7 +22,7 @@ using dataset from https://github.com/holiday-jp/holiday_jp
 
 | Implemantation | Release version using holiday_jp v0.x | Release version using holiday_jp v1.x |
 | --- | --- | --- |
-| [Python 3](https://github.com/holiday-jp/holiday_jp-go) | - | master |
+| [Python](https://github.com/LUXEYS/holiday_jp-python) | - | master |
 
 
 ### test
