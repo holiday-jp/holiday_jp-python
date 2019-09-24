@@ -6,7 +6,7 @@
 
 # holiday_jp-python
 
-Japanese holiday for Python
+Japanese holiday for Python 3+
 
 ## install
 
@@ -29,7 +29,7 @@ using dataset from https://github.com/holiday-jp/holiday_jp
 > python3 -m unittest holiday_jp.test
 
 ### for dev
-Build on linux with python 3.6
+Build on linux with python 3.x
 
 Build command:
 > python setup.py sdist
