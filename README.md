@@ -32,7 +32,7 @@ using dataset from https://github.com/holiday-jp/holiday_jp
 Build on linux with python 3.x
 
 Build command:
-> python setup.py sdist
+> python3 setup.py sdist
 
 OR
 
