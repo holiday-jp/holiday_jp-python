@@ -18,16 +18,19 @@ class HolidayJp(object):
   BUSINESS_DAY = ['月', '火', '水', '木', '金']
 
   HOLIDAY_DATASET = HolidayDataset.HOLIDAYS
+  DATASET_FORMAT = '%Y-%m-%d'
+
+  DATE_FORMAT = '%Y-%m-%d'
 
   def __init__(self, date):
     """init the date and fill the property.
 
-      date: string with the following format yyyy-mm-dd
+      date: string with the following format yyyy-mm-dd (default, overwrite DATE_FORMAT for other format)
         or date object
     """
-    self.date_obj = HolidayJp._format_date(date)
+    self.date_obj = self._format_date(date)
 
-    date_str = self.date_obj.strftime('%Y-%m-%d')
+    date_str = self.date_obj.strftime(self.DATE_FORMAT)
     if self.HOLIDAY_DATASET.get(date_str):
       # as the date is in the dict
       self.is_holiday = True
@@ -42,7 +45,8 @@ class HolidayJp(object):
       if self.date_obj.weekday() < 5:
         self.is_business_day = True
 
-  def _format_date(date):
+  @classmethod
+  def _format_date(cls, date):
     """Format the date to date object."""
     import unicodedata
     date_obj = None
@@ -54,7 +58,7 @@ class HolidayJp(object):
       date = date.replace('−', '-')
 
       try:
-        date_obj = datetime.datetime.strptime(date, '%Y-%m-%d').date()
+        date_obj = datetime.datetime.strptime(date, cls.DATE_FORMAT).date()
       except Exception as e:
         raise e
     else:
@@ -62,7 +66,8 @@ class HolidayJp(object):
 
     return date_obj
 
-  def between(start, last):
+  @classmethod
+  def between(cls, start, last):
     """Return a tuple of HolidayJp objects between 2 dates.
 
       start, last: string with the following format yyyy-mm-dd
@@ -70,25 +75,25 @@ class HolidayJp(object):
     """
     from dateutil import relativedelta
 
-    start = HolidayJp._format_date(start)
-    last = HolidayJp._format_date(last)
+    start = cls._format_date(start)
+    last = cls._format_date(last)
 
     result = []
 
     if last < start:
       raise ValueError('last must be greater than start.')
 
-    # include the limit
-    start_date_str = start.strftime('%Y-%m-%d')
-    if HolidayJp.HOLIDAY_DATASET.get(start_date_str):
-      result.append(HolidayJp(start))
+    # include the limit in the format of the dataset
+    start_date_str = start.strftime(cls.DATASET_FORMAT)
+    if cls.HOLIDAY_DATASET.get(start_date_str):
+      result.append(cls(start))
     # go day by day
     next_day = start + relativedelta.relativedelta(days=1)
 
     while next_day <= last:
-      next_day_str = next_day.strftime('%Y-%m-%d')
-      if HolidayJp.HOLIDAY_DATASET.get(next_day_str):
-        result.append(HolidayJp(next_day))
+      next_day_str = next_day.strftime(cls.DATASET_FORMAT)
+      if cls.HOLIDAY_DATASET.get(next_day_str):
+        result.append(cls(next_day))
       next_day += relativedelta.relativedelta(days=1)
 
     return result

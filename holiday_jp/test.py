@@ -86,3 +86,20 @@ class HolidayJpTest(TestCase):
     self.assertEqual(datetime.date(year=2008, month=12, day=23), holidays[0].date_obj)
     self.assertEqual(datetime.date(year=2009, month=1, day=1), holidays[1].date_obj)
     self.assertEqual(datetime.date(year=2009, month=1, day=12), holidays[2].date_obj)
+
+  def test_other_date_format(self):
+    """Check that we can overwrite the default date format."""
+    class MyHolidayJp(HolidayJp):
+      # overwrite the date format
+      DATE_FORMAT = '%d-%m-%Y'
+    # check init
+    not_holiday_date = MyHolidayJp('28-09-2019')
+    # and this format
+    MyHolidayJp('28-9-2019')
+
+    self.assertEqual(not_holiday_date.is_holiday, False)
+
+    # and between
+    holidays = MyHolidayJp.between('23-12-2008', '12-1-2009')
+
+    self.assertEqual(datetime.date(year=2008, month=12, day=23), holidays[0].date_obj)
