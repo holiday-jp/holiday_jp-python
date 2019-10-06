@@ -3,7 +3,6 @@
  [![PyPI downloads](https://img.shields.io/pypi/dm/holiday-jp.svg)](https://pypi.org/project/holiday-jp/)
  [![GitHub release](https://img.shields.io/github/release/LUXEYS/holiday_jp-python.svg)](https://github.com/LUXEYS/holiday_jp-python/releases)
 
-
 # holiday_jp-python
 
 Japanese holiday for Python 3+
@@ -12,18 +11,10 @@ Japanese holiday for Python 3+
 
 > pip install holiday-jp
 
-
 ### dependencies
 > pip3 install -r requirements.txt
 
 using dataset from https://github.com/holiday-jp/holiday_jp
-
-#### Implemantations
-
-| Implemantation | Release version using holiday_jp v0.x | Release version using holiday_jp v1.x |
-| --- | --- | --- |
-| [Python](https://github.com/LUXEYS/holiday_jp-python) | - | master |
-
 
 ### test
 > python3 -m unittest holiday_jp.test
@@ -46,7 +37,7 @@ pip3 install holiday_jp-xxx.tar.gz
 
 ## Usage
 
-```
+```python
 from holiday_jp import HolidayJp
 # with string date YYYY-MM-DD
 if HolidayJp('1990-01-01').is_holiday:
