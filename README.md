@@ -2,6 +2,7 @@
  [![PyPI version](https://img.shields.io/pypi/v/holiday-jp.svg)](https://pypi.org/project/holiday-jp/)
  [![PyPI downloads](https://img.shields.io/pypi/dm/holiday-jp.svg)](https://pypi.org/project/holiday-jp/)
  [![GitHub release](https://img.shields.io/github/release/LUXEYS/holiday_jp-python.svg)](https://github.com/LUXEYS/holiday_jp-python/releases)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/62a2d65ded034d8d8b3155ab9cb28e78)](https://www.codacy.com/manual/gabriel-tessier/holiday_jp-python?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=LUXEYS/holiday_jp-python&amp;utm_campaign=Badge_Grade)
 
 # holiday_jp-python
 
