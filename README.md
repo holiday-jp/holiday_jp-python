@@ -15,7 +15,7 @@ Japanese holiday for Python 3+
 ### dependencies
 > pip3 install -r requirements.txt
 
-using dataset from https://github.com/holiday-jp/holiday_jp
+using dataset from <https://github.com/holiday-jp/holiday_jp>
 
 ### test
 > python3 -m unittest holiday_jp.test
