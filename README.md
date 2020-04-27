@@ -7,21 +7,23 @@
 # holiday_jp-python
 
 Japanese holiday for Python 3+
+using dataset from https://github.com/holiday-jp/holiday_jp
 
 ## install
 
-> pip install holiday-jp
+> pip3 install holiday-jp
 
-### dependencies
+### If you want to contribute
+Build on linux with python 3.x
+
+#### Clone the project or download the source
+> git clone https://github.com/LUXEYS/holiday_jp-python.git
+
+#### dependencies
 > pip3 install -r requirements.txt
 
-using dataset from https://github.com/holiday-jp/holiday_jp
-
-### test
+#### test
 > python3 -m unittest holiday_jp.test
-
-### for dev
-Build on linux with python 3.x
 
 Build command:
 > python3 setup.py sdist
