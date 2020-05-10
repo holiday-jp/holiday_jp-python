@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<config>
+    <source_groups>
+        <source_group_8d29c25d-f8c9-41bb-b185-a7b6e754cd6f>
+            <name>Python Source Group</name>
+            <source_extensions>
+                <source_extension>.py</source_extension>
+            </source_extensions>
+            <source_paths>
+                <source_path>holiday_jp.py</source_path>
+                <source_path>holidays.py</source_path>
+                <source_path>test.py</source_path>
+            </source_paths>
+            <status>enabled</status>
+            <type>Python Source Group</type>
+        </source_group_8d29c25d-f8c9-41bb-b185-a7b6e754cd6f>
+    </source_groups>
+    <version>8</version>
+</config>
