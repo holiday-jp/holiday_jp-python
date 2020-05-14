@@ -55,10 +55,10 @@ class HolidayJpTest(TestCase):
     my_holiday = HolidayDataset.HOLIDAYS
 
     my_holiday.update({'2018-10-01': {
-      'week': '月',
-      'week_en': 'Monday',
-      'name': '誕生日',
-      'name_en': 'Birthday',
+        'week': '月',
+        'week_en': 'Monday',
+        'name': '誕生日',
+        'name_en': 'Birthday',
     }})
 
     class MyHolidayJp(HolidayJp):
@@ -103,3 +103,15 @@ class HolidayJpTest(TestCase):
     holidays = MyHolidayJp.between('23-12-2008', '12-1-2009')
 
     self.assertEqual(datetime.date(year=2008, month=12, day=23), holidays[0].date_obj)
+
+  def test_year_holidays(self):
+    """Check that the year call is correct."""
+    # let's take 2019 as there's more holidays due to Era changes.
+    one_year_holiday = HolidayJp.year_holidays(2019)
+    self.assertEqual(len(one_year_holiday), 22)
+
+  def test_month_holidays(self):
+    """Check the Golden week holidays."""
+    gw_holiday = HolidayJp.month_holidays(2020, 5)
+    # only 4 days for golden week need to take day off!
+    self.assertEqual(len(gw_holiday), 4)

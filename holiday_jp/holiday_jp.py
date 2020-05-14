@@ -97,3 +97,16 @@ class HolidayJp(object):
       next_day += relativedelta.relativedelta(days=1)
 
     return result
+
+  @classmethod
+  def year_holidays(cls, year):
+    """Return a list of HolidayJp for a given year."""
+    return cls.between('%s-01-01' % year, '%s-12-31' % year)
+
+  @classmethod
+  def month_holidays(cls, year, month):
+    """Return a list of HolidayJp for a given month year."""
+    import calendar
+    # get the last day of the month
+    last_day = calendar.monthrange(year, month)
+    return cls.between('%s-%s-01' % (year, month), '%s-%s-%s' % (year, month, last_day[1]))
