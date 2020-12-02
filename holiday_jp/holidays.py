@@ -1561,7 +1561,7 @@ class HolidayDataset(object):
         "week_en": "Saturday"
     },
     "1989-02-24": {
-        "name": "昭和天皇の大喪の礼",
+        "name": "大喪の礼",
         "name_en": "The Funeral Ceremony of Emperor Showa.",
         "week": "金",
         "week_en": "Friday"
@@ -1981,7 +1981,7 @@ class HolidayDataset(object):
         "week_en": "Wednesday"
     },
     "1993-06-09": {
-        "name": "皇太子徳仁親王の結婚の儀",
+        "name": "結婚の儀",
         "name_en": "The Rite of Wedding of HIH Crown Prince Naruhito",
         "week": "水",
         "week_en": "Wednesday"
@@ -4830,17 +4830,29 @@ class HolidayDataset(object):
         "week": "水",
         "week_en": "Wednesday"
     },
-    "2021-07-19": {
+    "2021-07-22": {
         "name": "海の日",
         "name_en": "Marine Day",
-        "week": "月",
-        "week_en": "Monday"
+        "week": "木",
+        "week_en": "Thursday"
     },
-    "2021-08-11": {
+    "2021-07-23": {
+        "name": "スポーツの日",
+        "name_en": "Health and Sports Day",
+        "week": "金",
+        "week_en": "Friday"
+    },
+    "2021-08-08": {
         "name": "山の日",
         "name_en": "Mountain Day",
-        "week": "水",
-        "week_en": "Wednesday"
+        "week": "日",
+        "week_en": "Sunday"
+    },
+    "2021-08-09": {
+        "name": "山の日 振替休日",
+        "name_en": "Holiday in lieu",
+        "week": "月",
+        "week_en": "Monday"
     },
     "2021-09-20": {
         "name": "敬老の日",
@@ -4853,12 +4865,6 @@ class HolidayDataset(object):
         "name_en": "Autumnal Equinox Day",
         "week": "木",
         "week_en": "Thursday"
-    },
-    "2021-10-11": {
-        "name": "スポーツの日",
-        "name_en": "Health and Sports Day",
-        "week": "月",
-        "week_en": "Monday"
     },
     "2021-11-03": {
         "name": "文化の日",
