@@ -1,3 +1,0 @@
-[submodule "dataset"]
-	path = dataset
-	url = git@github.com:holiday-jp/holiday_jp.git

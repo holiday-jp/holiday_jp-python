@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 # Script to generate the dict data file
 import json
+import urllib.request
 
 
 # format
@@ -13,11 +14,13 @@ class HolidayDataset(object):
     # holidays jp dataset
     HOLIDAYS = """
 
-# read the dataset
+# read the dataset from git until we can get access to the submodule source on local
 holiday_dict = {}
-with open('dataset/holidays_detailed.yml') as file:
+url = "https://raw.githubusercontent.com/holiday-jp/holiday_jp/master/holidays_detailed.yml"
+with urllib.request.urlopen(url) as file:
   lines = file.readlines()
   for i, line in enumerate(lines):
+    line = line.decode("utf-8")
     if 'date' in line:
       date_str = line.replace('date: ', '').strip()
       holiday_dict[date_str] = {}
