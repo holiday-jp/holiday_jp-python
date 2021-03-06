@@ -8,7 +8,7 @@ class HolidayJpTest(TestCase):
   """Test the holiday class."""
 
   def test_init(self):
-    """Check that the calss init correctly."""
+    """Check that the class init correctly."""
     HolidayJp('1990-01-01') # support string
     HolidayJp(datetime.date(year=1990, month=1, day=1)) # date
     with self.assertRaises(ValueError):
