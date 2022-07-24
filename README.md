@@ -25,13 +25,18 @@ Build on linux with python 3.x
 #### test
 > python3 -m unittest holiday_jp.test
 
+OR
+
+> make test
+
 Build command:
 > python3 setup.py sdist
 
 OR
 
-Run ./build.sh
-build the package that will be available in the dist/ directory
+> make build
+
+It will build the package and be available in the dist/ directory
 
 ### alternative install
 
