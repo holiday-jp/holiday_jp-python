@@ -73,8 +73,6 @@ class HolidayJp(object):
       start, last: string with the following format yyyy-mm-dd
         or date object
     """
-    from dateutil import relativedelta
-
     start = cls._format_date(start)
     last = cls._format_date(last)
 
@@ -88,13 +86,13 @@ class HolidayJp(object):
     if cls.HOLIDAY_DATASET.get(start_date_str):
       result.append(cls(start))
     # go day by day
-    next_day = start + relativedelta.relativedelta(days=1)
+    next_day = start + datetime.timedelta(days=1)
 
     while next_day <= last:
       next_day_str = next_day.strftime(cls.DATASET_FORMAT)
       if cls.HOLIDAY_DATASET.get(next_day_str):
         result.append(cls(next_day))
-      next_day += relativedelta.relativedelta(days=1)
+      next_day += datetime.timedelta(days=1)
 
     return result
 
