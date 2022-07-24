@@ -12,9 +12,6 @@ setup(
     packages=find_packages(),
     long_description=open('README.md').read(),
     zip_safe=False,
-    install_requires=[
-        "python-dateutil==2.8.1",
-    ],
     classifiers=[
         "Environment :: Web Environment",
         "Intended Audience :: Developers",
