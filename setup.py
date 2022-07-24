@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='holiday_jp',
-    version='20.12.02',
+    version='22.07.24',
     url='https://github.com/LUXEYS/holiday_jp-python',
     license='MIT',
     author='Luxeys',
@@ -17,10 +17,10 @@ setup(
         "Intended Audience :: Developers",
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
-        "Programming Language :: Python :: 3.4",
-        "Programming Language :: Python :: 3.5",
         "Programming Language :: Python :: 3.6",
         "Programming Language :: Python :: 3.7",
         "Programming Language :: Python :: 3.8",
+        "Programming Language :: Python :: 3.9",
+        "Programming Language :: Python :: 3.10",
     ]
 )
