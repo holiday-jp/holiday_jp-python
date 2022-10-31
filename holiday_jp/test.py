@@ -104,6 +104,11 @@ class HolidayJpTest(TestCase):
 
     self.assertEqual(datetime.date(year=2008, month=12, day=23), holidays[0].date_obj)
 
+  def test_between_error(self):
+    """Check that dates have a correct range."""
+    with self.assertRaises(ValueError):
+      holidays = HolidayJp.between('2020-01-01', '2009-01-31')
+
   def test_year_holidays(self):
     """Check that the year call is correct."""
     # let's take 2019 as there's more holidays due to Era changes.
