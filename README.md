@@ -17,9 +17,6 @@ Build on linux with python 3.x
 #### Clone the project or download the source
 > git clone https://github.com/holiday-jp/holiday_jp-python
 
-#### dependencies
-> pip3 install -r requirements.txt
-
 #### test
 > python3 -m unittest holiday_jp.test
 
