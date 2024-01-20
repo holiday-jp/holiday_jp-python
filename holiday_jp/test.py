@@ -120,3 +120,11 @@ class HolidayJpTest(TestCase):
     gw_holiday = HolidayJp.month_holidays(2020, 5)
     # only 4 days for golden week need to take day off!
     self.assertEqual(len(gw_holiday), 4)
+
+  def test_check_substitute_true(self):
+    holiday = HolidayJp('2023-01-02')
+    self.assertTrue(holiday._check_substitute())
+
+  def test_check_substitute_false(self):
+    random_date = datetime.date(2023, 2, 15)
+    self.assertFalse(HolidayJp(random_date)._check_substitute())
