@@ -171,10 +171,4 @@ class HolidayJp(object):
     Returns:
       bool: True if the date is a substitute holiday, False otherwise.
     """
-    """Check if the day is a substitute holiday."""
-    is_substitute_holiday = False
-
-    if self.is_holiday and '振替休日' in self.name:
-      is_substitute_holiday = True
-
-    return is_substitute_holiday
+    return self.is_holiday and '振替休日' in self.name

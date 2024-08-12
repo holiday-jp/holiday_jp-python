@@ -6,7 +6,7 @@
 
 ## 概要
 
-`holiday_jp-python` リポジトリは、**Python言語**向けの日本の祝日データを提供するライブラリです。このライブラリを使用することで、簡単に日本の祝日情報を取得し、カレンダーアプリケーションや日程管理ツールなどで利用することができます。based on [holiday-jp](https://github.com/holiday-jp/holiday_jp) dataset
+`holiday_jp-python` リポジトリは、**Python言語**向けの日本の祝日データを提供するライブラリです。このライブラリを使用することで、簡単に日本の祝日情報を取得し、カレンダーアプリケーションや日程管理ツールなどで利用することができます。[holiday-jp](https://github.com/holiday-jp/holiday_jp) データセットを使用。
 
 ## インストール
 
